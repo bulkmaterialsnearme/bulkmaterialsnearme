@@ -1,0 +1,32 @@
+{
+	"name": "bulding materials near me - svelte",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build && cp build ../",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-static": "next",
+		"@sveltejs/kit": "next",
+		"focus-visible": "^5.2.0",
+		"postcss": "^8.4.18",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"chota": "^0.8.0",
+		"html-minifier-terser": "^7.0.0",
+		"svelte-chota": "^1.8.6",
+		"svelte-mui": "^0.5.0",
+		"svelte-paginate-ts": "^0.0.1",
+		"svelte-preprocess": "^4.10.6",
+		"terser": "^5.15.1",
+		"tslib": "^2.3.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.1.0"
+	}
+}
