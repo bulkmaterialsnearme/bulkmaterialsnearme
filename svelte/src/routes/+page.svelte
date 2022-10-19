@@ -1,19 +1,45 @@
 <script>
-  export let name;
+  import "chota";
+  import { Row, Col, Container } from "svelte-chota";
 
+  // MUI components
   // import any components
-  import { Button, Checkbox } from "svelte-mui";
+  import { Button, Icon, Menu, Menuitem, Checkbox } from "svelte-mui";
+  import {
+    home,
+    menu,
+    invertColors,
+    moreVert,
+    arrowForward,
+    arrowDropDown,
+    close,
+    add,
+    chevronRight,
+    chevronLeft,
+  } from "$lib/mui-components/components/icons";
 
+  import Map from "$lib/svg-components/usa-map.svelte";
+
+  export let name = "test";
+  // import any components
   let checked = true;
 </script>
 
-<h1>Hello {name}!</h1>
+<Container>
+  <Row>
+    <Col size="12" class="spacer" />
 
-<Checkbox bind:checked>Checkbox</Checkbox>
+    <Col size="12">
+      <h1>Hello {name}!</h1>
+      <Map />
+    </Col>
+  </Row>
+</Container>
 
-<p>Checkbox is <strong>{checked ? "checked" : "unchecked"}</strong></p>
+<!-- <Checkbox bind:checked>Checkbox</Checkbox> -->
+<!-- <p>Checkbox is <strong>{checked ? "checked" : "unchecked"}</strong></p> -->
 
-<Button
+<!-- <Button
   outlined
   shaped
   color="Red"
@@ -22,8 +48,7 @@
   }}
 >
   Inverse
-</Button>
-
+</Button> -->
 <style>
   h1 {
     color: purple;
