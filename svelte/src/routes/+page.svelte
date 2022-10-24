@@ -28,19 +28,17 @@
   import MapTest from "$lib/maps/test.svelte";
 </script>
 
-<Map />
+<!-- <Map /> -->
 
-<MapTest />
-
-<!-- <Container>
+<Container>
   <Row>
     <Col size="12" class="spacer" />
 
     <Col size="12">
-      <h1>Hello {name}!</h1>
+      <MapTest />
     </Col>
   </Row>
-</Container> -->
+</Container>
 
 <!-- <Checkbox bind:checked>Checkbox</Checkbox> -->
 <!-- <p>Checkbox is <strong>{checked ? "checked" : "unchecked"}</strong></p> -->
@@ -55,11 +53,11 @@
 >
   Inverse
 </Button> -->
-<span class="price-marker price-location">
+
+<!-- <span class="price-marker price-location">
   <span class="material-icons md-36">location_on</span>
   {amount}
-</span>
-
+</span> -->
 <style>
   h1 {
     color: purple;
@@ -84,5 +82,8 @@
     top: 10.5em;
     left: 8.2em;
     z-index: 2;
+  }
+  svg {
+    border: none !important;
   }
 </style>
