@@ -8,7 +8,8 @@ const config: UserConfig = {
 	server: {
 		port: '80',
 		host: '0.0.0.0'
-	} 
+	},
+	cors: true
 };
 
 export default config;

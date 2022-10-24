@@ -133,4 +133,10 @@
     padding: 0px;
     font-size: 12px;
   }
+  .message {
+    color: #fff;
+  }
+  input.input {
+    color: #333;
+  }
 </style>

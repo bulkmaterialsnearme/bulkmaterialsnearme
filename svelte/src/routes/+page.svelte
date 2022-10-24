@@ -23,18 +23,24 @@
   export let name = "test";
   // import any components
   let checked = true;
+  let amount = "$27.88-$29.86 / ton";
+
+  import MapTest from "$lib/maps/test.svelte";
 </script>
 
-<Container>
+<Map />
+
+<MapTest />
+
+<!-- <Container>
   <Row>
     <Col size="12" class="spacer" />
 
     <Col size="12">
       <h1>Hello {name}!</h1>
-      <Map />
     </Col>
   </Row>
-</Container>
+</Container> -->
 
 <!-- <Checkbox bind:checked>Checkbox</Checkbox> -->
 <!-- <p>Checkbox is <strong>{checked ? "checked" : "unchecked"}</strong></p> -->
@@ -49,8 +55,34 @@
 >
   Inverse
 </Button> -->
+<span class="price-marker price-location">
+  <span class="material-icons md-36">location_on</span>
+  {amount}
+</span>
+
 <style>
   h1 {
     color: purple;
+  }
+  .price-marker {
+    color: #333;
+    padding: 1em;
+    background: #fff;
+    max-width: 100px;
+    border-radius: 5px;
+    max-height: 10px;
+    display: flex;
+    border: 1px solid #333;
+  }
+  .price:hover {
+    color: #333;
+    text-shadow: 1px 3px 2px #000;
+    cursor: pointer;
+  }
+  .price-location {
+    position: absolute;
+    top: 10.5em;
+    left: 8.2em;
+    z-index: 2;
   }
 </style>
