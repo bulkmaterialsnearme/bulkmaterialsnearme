@@ -9,7 +9,9 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"generate-sitemap": "./generate-sitemap.sh"
+		"generate-sitemap": "./generate-sitemap.sh",
+		"generate-robots": "./generate-robots.sh",
+		"generate-seo": "npm run generate-sitemap && npm run generate-robots"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
