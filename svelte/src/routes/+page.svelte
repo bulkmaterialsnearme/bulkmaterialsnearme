@@ -26,6 +26,7 @@
   let amount = "$27.88-$29.86 / ton";
 
   import MapTest from "$lib/maps/test.svelte";
+  import NationalAvg from "$lib/national-avg.svelte";
 </script>
 
 <!-- <Map /> -->
@@ -33,12 +34,34 @@
 <Container>
   <Row>
     <Col size="12" class="spacer" />
-
     <Col size="12">
       <MapTest />
     </Col>
   </Row>
 </Container>
+<div class="hud hide-xs">
+  <NationalAvg
+    national_avg="32.50"
+    title="National Avg."
+    caption="*avg of material by ton in USD"
+    currency="$"
+    measurement="yard"
+  />
+  <NationalAvg
+    national_avg="28.45"
+    title="State Avg."
+    caption="*avg of material by yard in USD"
+    currency="$"
+    measurement="yard"
+  />
+  <NationalAvg
+    national_avg="28.45"
+    title="State Avg."
+    caption="*avg of material by yard in USD"
+    currency="$"
+    measurement="yard"
+  />
+</div>
 
 <!-- <Checkbox bind:checked>Checkbox</Checkbox> -->
 <!-- <p>Checkbox is <strong>{checked ? "checked" : "unchecked"}</strong></p> -->
@@ -58,9 +81,13 @@
   <span class="material-icons md-36">location_on</span>
   {amount}
 </span> -->
-<style>
-  h1 {
-    color: purple;
+<style lang="postcss">
+  .hud {
+    position: absolute !important;
+    top: 5em;
+    right: 0px;
+    z-index: 1;
+    width: 160px;
   }
   .price-marker {
     color: #333;

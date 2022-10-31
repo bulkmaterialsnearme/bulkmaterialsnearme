@@ -22,6 +22,7 @@
 
 <Header />
 <slot />
+
 <Footer />
 
 <style global>
@@ -138,5 +139,8 @@
   }
   input.input {
     color: #333;
+  }
+  .container {
+    position: relative;
   }
 </style>
